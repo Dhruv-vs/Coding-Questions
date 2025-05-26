@@ -22,8 +22,8 @@ class Solution {
       int sum = INT_MIN;
       int val = find(root,sum);
       // if the sum is not updated means no left right in entire tree then return the single path sum
-      if (sum == INT_MIN)
-            return val;
-      return sum;
+      if (sum == INT_MIN) return val;
+      if(root->left && root->right) return sum; // if both exist means some path exists
+      return max(sum,val);
     }
 }; 

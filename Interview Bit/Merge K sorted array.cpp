@@ -6,7 +6,7 @@ vector<int> Solution::solve(vector<vector<int> > &A) {
     // creating min heap
     // priority_queue<int,vector<int>,greater<int> >minheap; // simple minheap
     
-    // mean contains pair 
+    // minheap contains pair replace int with pairs
     priority_queue<pair<int,pair<int,int>>,vector<pair<int,pair<int,int>>>,greater<pair<int,pair<int,int>>> >minheap;
     
     for(int i=0;i<row;i++) minheap.push(make_pair(A[i][0],make_pair(i,0)));
